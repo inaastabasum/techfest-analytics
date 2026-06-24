@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PC67C6566G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PC67C6566G');
+</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="register-container">
+
+    <h1>📝 Event Registration</h1>
+
+    <p>Reserve your seat for Tech Fest 2026</p>
+
+    <form id="registrationForm">
+
+        <input
+            type="text"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="email"
+            placeholder="Email Address"
+            required>
+
+        <button type="submit">
+            Register Now
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+document.getElementById("registrationForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    gtag('event', 'registration_completed', {
+        event_category: 'Registration',
+        event_label: 'College Event Registration'
+    });
+
+    setTimeout(function(){
+        window.location.href = "thankyou.html";
+    }, 1000);
+
+});
+</script>
+
+</body>
+</html>
